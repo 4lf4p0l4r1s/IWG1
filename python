@@ -1,0 +1,2 @@
+a = input("Nombre: ")
+print("hola", a)
