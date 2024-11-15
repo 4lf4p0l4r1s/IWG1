@@ -1,8 +1,9 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('USM.jpg'); 
+    background-image: url('/static/USM.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -15,7 +16,7 @@ header {
     padding: 1em; 
     background-color: rgb(0, 95, 159);
     color: rgb(255, 255, 255);
-    position: relative; 
+    position: relative;     
 }
 
 .header-image {
