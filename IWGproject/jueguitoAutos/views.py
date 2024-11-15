@@ -4,6 +4,9 @@ from django.shortcuts import render
 import requests
 from django.http import JsonResponse
 
+def index(request):
+    return render(request, 'paginita.html')
+
 def obtener_datos_api(request):
     url = "https://api.example.com/endpoint"  # Cambia esto por la URL de tu API
     response = requests.get(url)
