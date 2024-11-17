@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido a Kilómetros Recorridos</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la plataforma de Kilómetros Recorridos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'registrar_usuario' %}">
+                <button>Registrar Usuario</button>
+            </a></li>
+            <li><a href="{% url 'registrar_kilometraje' %}">
+                <button>Registrar Kilometraje</button>
+            </a></li>
+        </ul>
+    </nav>
+
+    <footer>
+        <p>&copy; 2024 Kilómetros Recorridos</p>
+    </footer>
+</body>
+</html>
