@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ranking</title>
+    <link rel="stylesheet" href="{% static 'css/ranking.css' %}">
+</head>
+<body>
+    <h1>Top 10 Usuarios con Menor Huella de Carbono</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Nombre</th>
+                <th>Huella de Carbono (kg CO₂)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.huella_carbono_total }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Kilometraje</title>
+    <link rel="stylesheet" href="{% static 'css/registrar_kilometros.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registrar Kilometraje</h1>
+
+        <!-- Muestra mensajes de error si existen -->
+        {% if form.errors %}
+        <div class="errors">
+            <ul>
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <li>{{ field|capfirst }}: {{ error }}</li>
+                    {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        <!-- Formulario -->
+        <form method="POST" action="{% url 'registrar_kilometraje' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="usuario">Usuario (ROL):</label>
+                {{ form.usuario }} <!-- Aquí se muestra el campo para seleccionar el usuario por RUT -->
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha:</label>
+                {{ form.fecha }} <!-- El campo de fecha con el menú desplegable -->
+            </div>
+            <div class="form-group">
+                <label for="kilometros_recorridos">Kilómetros recorridos:</label>
+                {{ form.kilometros_recorridos }}
+            </div>
+            <div class="form-group">
+                <label for="medio_transporte">Medio de transporte:</label>
+                {{ form.medio_transporte }}
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+
+        <!-- Enlace para regresar -->
+        <a href="{% url 'ranking' %}" class="btn btn-secondary">Ver Ranking</a>
+    </div>
+</body>
+</html>

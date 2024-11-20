@@ -1,0 +1,66 @@
+/* General container styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Styling for the page heading */
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header styling */
+.table th {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Table cell styling */
+.table td {
+    background-color: #f9f9f9;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Hover effect for table rows */
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button styling */
+.btn-secondary {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #45a049;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for the highlighted values */
+.highlight {
+    color: #FF5722;
+    font-weight: bold;
+}

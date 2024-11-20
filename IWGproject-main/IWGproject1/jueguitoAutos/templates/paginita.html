@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css'%}">
+    <title>Proyecto IWG</title>
+    
+</head>
+<body>
+    <header>
+        <a href="https://usm.cl/" target="#">
+            <img src= "{% static 'Logo.jpg'%}" class="header-image">
+        </a>
+        <h1>Bienvenido a Nuestro Proyecto</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'login_usuario' %}" target ="_blank">Mis Datos</a></li>
+                <li><a href="{% url 'registrar_kilometraje' %}" target ="_blank">Sumar Kilometros</a></li>
+                <li><a href="{% url 'ranking' %}" target ="_blank">Ranking</a></li>
+                <li><a href="{% url 'registro_usuario' %}" target ="_blank">Registrar</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Movilidad_sostenible" target="_blank">Acerca de</a></li>
+                <li><a href="https://github.com/4lf4p0l4r1s/IWGproject" target="_blank">Repositorio</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="main-background"></div>
+        <section>
+            <h2>Sobre Este Proyecto</h2>
+            <p>Este proyecto se basa en la idea de crear un juego que fomente metodos de transporte limpios.</p>
+        </section>
+        <section>
+            <h2>Como empezar</h2>
+            <p>Primero cliquea el boton mi consumo </p>
+            <p>ingresar con tus nombre y rol, (asegurate de que el formato del rol sea valido nnnnnnnnn-k)</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; IWG-PJ1. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
